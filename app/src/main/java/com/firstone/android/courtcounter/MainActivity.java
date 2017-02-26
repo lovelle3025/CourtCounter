@@ -1,5 +1,7 @@
 package com.firstone.android.courtcounter;
 
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
@@ -7,7 +9,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.TextView;
 
+import com.google.android.gms.appinvite.AppInviteInvitation;
+
 public class MainActivity extends AppCompatActivity {
+
     int scoreTeamA = 0;
     int scoreTeamB = 0;
 
@@ -115,7 +120,7 @@ public class MainActivity extends AppCompatActivity {
         scoreTeamB = 0;
         displayForTeamA(scoreTeamA);
         displayForTeamB(scoreTeamB);
-}
+    }
     /**
      * Displays the given score for Team B.
      */
@@ -123,4 +128,5 @@ public class MainActivity extends AppCompatActivity {
         TextView scoreView = (TextView) findViewById(R.id.team_b_score);
         scoreView.setText(String.valueOf(score));
     }
+
 }

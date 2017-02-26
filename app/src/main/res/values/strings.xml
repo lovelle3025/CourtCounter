@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">KeepScore</string>
+    <string name="invitation_title" />
+    <string name="invitation_message" />
+    <string name="invitation_deep_link" />
+    <string name="invitation_custom_image" />
 </resources>
