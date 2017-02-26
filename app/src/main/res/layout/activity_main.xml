@@ -92,10 +92,12 @@
                 android:background="@android:color/holo_red_dark" />
 
             <Button
-                android:text="Share"
+                android:text="Share App"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:id="@+id/button3" />
+                android:id="@+id/button3"
+                android:layout_margin="8dp"
+                android:fontFamily="sans-serif-medium" />
 
         </LinearLayout>
 

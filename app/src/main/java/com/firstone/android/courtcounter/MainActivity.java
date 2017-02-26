@@ -15,7 +15,7 @@ import com.google.android.gms.appinvite.AppInviteInvitation;
 public class MainActivity extends AppCompatActivity {
     Button btnShare;
     Intent shareIntent;
-    String shareBody = "This is a cool app, you should try it!";
+    String shareBody = "This is a cool app, you should try it! https://play.google.com/store/apps/details?id=com.firstone.android.courtcounter ";
 
     int scoreTeamA = 0;
     int scoreTeamB = 0;
