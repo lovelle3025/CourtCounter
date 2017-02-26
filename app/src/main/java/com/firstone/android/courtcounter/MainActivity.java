@@ -7,11 +7,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.TextView;
 
 import com.google.android.gms.appinvite.AppInviteInvitation;
 
 public class MainActivity extends AppCompatActivity {
+    Button btnShare;
+    Intent shareIntent;
+    String shareBody = "This is a cool app, you should try it!";
 
     int scoreTeamA = 0;
     int scoreTeamB = 0;
@@ -20,7 +24,20 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-    }
+
+        btnShare = (Button) findViewById(R.id.button3);
+
+        btnShare.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                shareIntent = new Intent(Intent.ACTION_SEND);
+                shareIntent.setType("text/plain");
+                shareIntent.putExtra(Intent.EXTRA_SUBJECT, "My App");
+                shareIntent.putExtra(Intent.EXTRA_TEXT, shareBody);
+                startActivity(Intent.createChooser(shareIntent, "Share via"));
+            }
+        });
+}
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
